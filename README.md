@@ -14,12 +14,13 @@ This document supports the following devices:
 |LW20|11       |1.0.1   |No      |
 |LW20|11       |1.0.0   |No      |
 
-> Firmware of the LW20 can be upgraded using the provided tools.
+> Firmware of the LW20 can be upgraded using the tool found at http://support.lightware.co.za/LightWareUpgrader-1.4.0.rar.
 
 ## Revision history
 
 |Revision|Date|Notes|
 |---|---|---|
+| 1 | 25/07/2018 | Added note about upgrader tool download location. |
 | 0 | 16/07/2018 | Initial pre-release draft. |
 
 
