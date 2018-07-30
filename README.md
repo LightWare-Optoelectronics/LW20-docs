@@ -22,6 +22,7 @@ This document supports the following devices:
 
 |Revision|Date|Notes|
 |---|---|---|
+| 3 | 30/07/2018 | Added detail about LWNX Commands 43, 16 & 17. |
 | 2 | 30/07/2018 | Fixed ambiguity about LWNX packet payload length. Supported firmware updated. |
 | 1 | 25/07/2018 | Added note about upgrader tool download location. |
 | 0 | 16/07/2018 | Initial pre-release draft. |

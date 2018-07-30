@@ -21,7 +21,8 @@
 |30	|[Stream](command_detail?id=_30-stream)				                |Current data stream type						|RW	|4	|4	|N|
 |31	|[Stream statistics](command_detail?id=_31-statistics)	    	    |Enable/disable statistics streaming			|RW	|1	|1	|N|
 |35	|[Statistics data](command_detail?id=_35-statistics-data)		    |General status information						|-	|-	|-	|-|
-|44	|[Distance data](command_detail?id=_44-distance-data)		        |Measurment distance data						|R	|(varies)	|-	|-|
+|43	|[Signal probability data](command_detail?id=_43-signal-probability-data) |Signal probability data          						|-	|-	|-	|-|
+|44	|[Distance data](command_detail?id=_44-distance-data)		        |Measurment distance data						|R	|*varies*|-	|-|
 |50	|[Laser firing](command_detail?id=_50-laser-firing)		     		|Is laser firing?								|RW	|1	|1	|N|
 |55	|[Temperature](command_detail?id=_55-temperature)		     	  	|Measured temperature							|R	|4	|-	|-|
 |85	|[Noise](command_detail?id=_85-noise)		                		|Measured background noise						|R	|4	|-	|-|

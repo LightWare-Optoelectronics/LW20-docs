@@ -90,24 +90,51 @@ Writing the safety `token` to this command will restart the LW20.
 ---
 ## 16. Stage firmware
 
-Upload firmware page.
+The first part of uploading firmware to the LW20 is to stage the data. This command accepts pages of the firmware, each `128 bytes` long, and an index to indicate which page is being uploaded. Pages are created by dividing the firmware upgrade file into multiple 128 byte chunks.
 
-*More detail coming soon*
+When writing to this command, use the following data structure:
+
+|Byte offset|Data type|Name|Description|
+|---|---|---|---|
+|0x00|`int16`|Page index|The index of the page currently being uploaded|
+|0x02|`128 bytes`|Page data|The byte data of the page currently being uploaded|
+
+When reading this command, or analyzing its response after writing a page, the packet will contain an `int32` error code:
+
+|Value|Description|
+|---|---|
+|0 to 112|Index of successfully written page|
+|-1|Page length is invalid|
+|-2|Page index is out of range|
+|-3|Flash failed to erase|
+|-4|Firmware file has invalid header|
+|-5|Flash failed to write|
+|-6|Firmware is for a different hardware version|
+|-7|Firmware is for a different product|
 
 |Read|Write|Persists|
 |---|---|---|
-| `uint32` | `130 bytes` | - |
+| `int32` | `130 bytes` | - |
 
 ---
 ## 17. Commit firmware
 
-Commit staged firmware.
+The second part of uploading firmware to the LW20 is to commit the staged data. Once the firmware data has been fully uploaded using the [16. Stage Firmware](command_detail?id=_16-stage-firmware) command, then this command can be written to (with 0 bytes).
 
-*More detail coming soon*
+When reading this command, or analyzing its response after writing, the packet will contain an `int32` error code:
+
+|Value|Description|
+|---|---|
+|-1|Firmware integrity check failed|
+|1|Firmware integrity check passed and firmware committed|
+
+Once the firmware is committed, a reboot is required to engage the new firmware. This can be done by cycling power to the LW20 or by sending the [14. Reset](command_detail?id=_14-reset) command.
+
+After the unit has rebooted the firmware version should be checked to ensure the new firmware is installed.
 
 |Read|Write|Persists|
 |---|---|---|
-| `uint32` | `0 bytes` | - |
+| `int32` | `0 bytes` | - |
 
 ---
 ## 20. Incoming voltage
@@ -167,6 +194,7 @@ The LW20 can continuously output data without individual request commands being 
 |---|---|
 | 0 | disabled |
 | 5 | [44. Distance data](command_detail?id=_44-distance-data) |
+| 10 | [43. Signal probability data](command_detail?id=_43-signal-probability-data) |
 
 !> Streaming commands will typically only output on the serial interface. While it is possible to read and write the Stream command over I2C, the resulting streamed data will not be retrievable.
 
@@ -210,6 +238,31 @@ Reading `Statistics` will retrieve a `uint8` indicating the state of statistics 
 | - | - | - |
 
 ---
+## 43. Signal probability data
+
+*Serial interface only*
+
+This command contains the probability of signal occurrence in a single measurement. If [30. Stream](command_detail?id=_30-stream) is set to `10` then this command will automatically output at the measurement update rate.
+
+!> Please note that this command requires a significant amount of data per packet. It is recommended to operate in a baud rate of 921600 and to not exceed 129 readings per second.
+
+The measurement range is divided into 1m width buckets. There are 120 such buckets on the LW20. The value of each bucket represents the probability that a signal exists there. The minimum value for a probability is 0 and the maximum value is the number of total laser shots taken during the measurement.
+
+The data is composed as follows:
+
+|Byte offset|Data type|Name|Description|
+|---|---|---|---|
+|0x00|`1 byte`|Reserved||
+|0x01|`int16`|Bucket count|The number of buckets (120 default)|
+|0x03|`int16`|Shot count|Number of laser shots that contributed to this measurement|
+|0x05|`79 bytes`|Reserved||
+|0x54|120 x `uint16`|Bucket values|A probability value for each bucket|
+
+|Read|Write|Persists|
+|---|---|---|
+| - | - | - |
+
+---
 ## 44. Distance data
 
 This command contains distance data as measured by the LW20. The data included will vary based on the configuration of the [27. Distance output](command_detail?id=_27-distance-output) command.
@@ -234,7 +287,7 @@ The data will be packed in order based on the bits set in the `Distance output` 
 
 |Read|Write|Persists|
 |---|---|---|
-| - | - | - |
+| *varies* | - | - |
 
 ---
 ## 50. Laser firing
