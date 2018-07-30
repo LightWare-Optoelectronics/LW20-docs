@@ -9,7 +9,9 @@ This document supports the following devices:
 
 |Product|Hardware|Firmware|Supported|
 |----|--------|--------|:-------:|
-|LW20|11       |1.1.0   |Yes      |
+|LW20|11       |1.1.2   |Yes     |
+|LW20|11       |1.1.1   |No      |
+|LW20|11       |1.1.0   |No      |
 |LW20|11       |1.0.2   |No      |
 |LW20|11       |1.0.1   |No      |
 |LW20|11       |1.0.0   |No      |
@@ -20,6 +22,7 @@ This document supports the following devices:
 
 |Revision|Date|Notes|
 |---|---|---|
+| 2 | 30/07/2018 | Fixed ambiguity about LWNX packet payload length. Supported firmware updated. |
 | 1 | 25/07/2018 | Added note about upgrader tool download location. |
 | 0 | 16/07/2018 | Initial pre-release draft. |
 

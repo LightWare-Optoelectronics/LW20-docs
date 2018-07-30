@@ -68,7 +68,7 @@ The `Flags` bytes form a 16 bit integer that represents the payload length and r
 
 The `ID` byte represents which command the request/response relates to.
 
-There will be between 0 and 1023 `Data` bytes depending on the command type. Each command under the [detailed command descriptions](command_detail.md) section documents how the data bytes are used.
+There will be between 1 and 1023 `Payload` bytes (inclusive) depending on the command type. Each command under the [detailed command descriptions](command_detail.md) section documents how the data bytes are used. The `ID` byte will always be present in the payload.
 
 The `CRC` bytes form a 16 bit checksum value used to validate the integrity of the packet data. Every byte in the packet except for the CRC itself is included in the checkum calculation.
 
