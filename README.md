@@ -16,12 +16,13 @@ This document supports the following devices:
 |LW20|11       |1.0.1   |No      |
 |LW20|11       |1.0.0   |No      |
 
-> Firmware of the LW20 can be upgraded using the tool found at http://support.lightware.co.za/LightWareUpgrader-1.4.0.rar.
+> Firmware of the LW20 can be upgraded using the tool found at http://support.lightware.co.za/LightWareUpgrader-1.6.0.rar.
 
 ## Revision history
 
 |Revision|Date|Notes|
 |---|---|---|
+| 4 | 3/08/2018 | Command 16 (Stage firmware) has a revised values table. Command 30 (Stream) fixed to show uint32 as read/write parameter. Upgrade tool changed to version 1.6.0. |
 | 3 | 30/07/2018 | Added detail about LWNX Commands 43, 16 & 17. |
 | 2 | 30/07/2018 | Fixed ambiguity about LWNX packet payload length. Supported firmware updated. |
 | 1 | 25/07/2018 | Added note about upgrader tool download location. |

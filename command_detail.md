@@ -103,7 +103,7 @@ When reading this command, or analyzing its response after writing a page, the p
 
 |Value|Description|
 |---|---|
-|0 to 112|Index of successfully written page|
+|0 to 1000|Index of successfully written page|
 |-1|Page length is invalid|
 |-2|Page index is out of range|
 |-3|Flash failed to erase|
@@ -200,7 +200,7 @@ The LW20 can continuously output data without individual request commands being 
 
 |Read|Write|Persists|
 |---|---|---|
-| `uint8` | `uint8` | No |
+| `uint32` | `uint32` | No |
 
 ---
 ## 31. Stream statistics
