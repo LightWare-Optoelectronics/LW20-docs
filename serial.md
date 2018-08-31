@@ -75,7 +75,7 @@ The `CRC` bytes form a 16 bit checksum value used to validate the integrity of t
 ## Checksum
 Each packet has a 2 byte checksum which is used to validate data integrity. The algorithm is `CRC-16-CCITT 0x1021` (idendtical to the one used for the XMODEM protocol).
 
-The CRC must be correctly formed for the LW316 to accept and process packets. Below are some examples in various languages for CRC calculation:
+The CRC must be correctly formed for the LW20 to accept and process packets. Below are some examples in various languages for CRC calculation:
 
 **C/C++**
 ```c

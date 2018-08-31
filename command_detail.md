@@ -45,7 +45,7 @@ A `16 byte string` (null terminated) of the serial identifier assigned during pr
 
 *Serial interface only*
 
-A null terminated ASCII string. The LW316 will send this command when it needs to communicate a human readable message.
+A null terminated ASCII string. The LW20 will send this command when it needs to communicate a human readable message.
 
 |Read|Write|Persists|
 |---|---|---|

@@ -1,5 +1,6 @@
 * Overview
   * [This document](/)
+  * [Firmware change log](change_log.md)
   
 * Communication interfaces
   * [Overview](communication.md)
