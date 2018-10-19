@@ -9,6 +9,9 @@ This document supports the following devices (See [Firmware change log](change_l
 
 |Product|Hardware|Firmware|Supported|
 |----|--------|--------|:-------:|
+|LW20|11/12   |1.5.0   |Yes      |
+|LW20|11/12   |1.4.3   |Yes      |
+|LW20|11/12   |1.4.2   |Yes      |
 |LW20|11/12   |1.4.1   |Yes      |
 |LW20|11/12   |1.4.0   |Yes      |
 |LW20|11/12   |1.3.1   |Yes      |
@@ -29,12 +32,13 @@ This document supports the following devices (See [Firmware change log](change_l
 
 |Revision|Date|Notes|
 |---|---|---|
-| 6 | 03/10/2018 | Updated version support table. Added Upgrader tool download instructions. Added changes for version 1.3.0, 1.3.1, 1.4.0, 1.4.1. |
+| 7 | 19/10/2018 | Updated version support table. Updated Upgrader tool link. Added changes for versions 1.4.2, 1.4.3, 1.5.0. |
+| 6 | 03/10/2018 | Updated version support table. Added Upgrader tool download instructions. Added changes for versions 1.3.0, 1.3.1, 1.4.0, 1.4.1. |
 | 5 | 31/08/2018 | Updated version support table. Upgrade tool changed to version 1.8.0. Added firmware change log. |
 | 4 | 03/08/2018 | Command 16 (Stage firmware) has a revised values table. Command 30 (Stream) fixed to show uint32 as read/write parameter. Upgrade tool changed to version 1.6.0. |
 | 3 | 30/07/2018 | Added detail about LWNX Commands 43, 16 & 17. |
 | 2 | 30/07/2018 | Fixed ambiguity about LWNX packet payload length. Supported firmware updated. |
-| 1 | 25/07/2018 | Added note about upgrader tool download location. |
+| 1 | 25/07/2018 | Added note about Upgrader tool download location. |
 | 0 | 16/07/2018 | Initial pre-release draft. |
 
 

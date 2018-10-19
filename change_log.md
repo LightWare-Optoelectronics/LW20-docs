@@ -4,13 +4,28 @@
 
 > NOTE: The Upgrader tool only currently supports Windows at this time.
 
-1. Download the LightWare Upgrader tool here: http://support.lightware.co.za/LightWareUpgrader-1.16.0.rar
+1. Download the LightWare Upgrader tool here: http://support.lightware.co.za/LightWareUpgrader-1.18.0.rar
 2. Unzip the downloaded file to a location on your PC.
 3. Run the file `LightWareUpgrader.exe` in the unzipped folder.
 4. Connect your LightWare device via USB to your PC.
 5. Click the COM port that appears.
 6. If the device is not the latest version you can click the `Upgrade` button to begin the process.
 7. Wait until the upgrade has completed successfully and click `OK`.
+
+## 1.5.0
+
+*Features*
+- Added a mode for fast unfiltered data output with readings at 20 kHz.
+
+## 1.4.3
+
+*Changes*
+- Minimized power draw during start up.
+
+## 1.4.2
+
+*Changes*
+- Improved EMC characteristics for unshielded SF20 units.
 
 ## 1.4.1
 
