@@ -22,9 +22,11 @@
 |31	|[Stream statistics](command_detail?id=_31-statistics)	    	    |Enable/disable statistics streaming			|RW	|1	|1	|N|
 |35	|[Statistics data](command_detail?id=_35-statistics-data)		    |General status information						|-	|-	|-	|-|
 |43	|[Signal probability data](command_detail?id=_43-signal-probability-data) |Signal probability data          						|-	|-	|-	|-|
+|40	|[Raw distance data](command_detail?id=_40-raw-distance-data)       |Raw measurment distance data					|R	|*varies*|-	|-|
 |44	|[Distance data](command_detail?id=_44-distance-data)		        |Measurment distance data						|R	|*varies*|-	|-|
 |50	|[Laser firing](command_detail?id=_50-laser-firing)		     		|Is laser firing?								|RW	|1	|1	|N|
 |55	|[Temperature](command_detail?id=_55-temperature)		     	  	|Measured temperature							|R	|4	|-	|-|
+|70	|[High speed mode](command_detail?id=_70-high-speed-mode)		    |Toggle 20 kHz mode          					|RW	|1	|1	|Y|
 |85	|[Noise](command_detail?id=_85-noise)		                		|Measured background noise						|R	|4	|-	|-|
 |88	|[Alarm status](command_detail?id=_88-alarm-status)		        	|Status of alarm A & B 							|R	|2	|-	|-|
 |90	|[Baud rate](command_detail?id=_90-baud-rate)		            	|Serial baud rate								|RW	|1	|1	|Y|

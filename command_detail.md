@@ -193,6 +193,7 @@ The LW20 can continuously output data without individual request commands being 
 |Value|Streamed data|
 |---|---|
 | 0 | disabled |
+| 1 | [40. Raw distance data](command_detail?id=_40-raw-distance-data) |
 | 5 | [44. Distance data](command_detail?id=_44-distance-data) |
 | 10 | [43. Signal probability data](command_detail?id=_43-signal-probability-data) |
 
@@ -236,6 +237,26 @@ Reading `Statistics` will retrieve a `uint8` indicating the state of statistics 
 |Read|Write|Persists|
 |---|---|---|
 | - | - | - |
+
+---
+## 40. Raw distance data
+
+*Supported from firmware version 1.5.0*
+
+This command contains distance data as measured by the LW20. A packet contains 200 first return readings with no filtering. If [30. Stream](command_detail?id=_30-stream) is set to `1` then this command will automatically output every 200 measured distances.
+
+!> Please note that this command requires a significant amount of data throughput. It is recommended to operate in a baud rate of 921600.
+
+The data is composed as follows:
+
+|Byte offset|Data type|Name|Description|
+|---|---|---|---|
+|0x00|`uint8`|Reading count|Number of 2-byte readings in this packet.|
+|0x01|`Reading count` x `int16`|Readings|Array of distances [cm].|
+
+|Read|Write|Persists|
+|---|---|---|
+| *varies* | - | - |
 
 ---
 ## 43. Signal probability data
@@ -311,6 +332,26 @@ Reading this command will return the temperature in 100ths of a degree.
 |Read|Write|Persists|
 |---|---|---|
 | `uint32` | - | - |
+
+---
+## 70. High speed mode
+
+*Supported from firmware version 1.5.0*
+
+Writing to this command will enable/disable the 20 kHz high speed mode.
+
+|Value|Description|
+|---|---|
+|0| Disabled |
+|1| Enabled |
+
+In order to retrieve the full 20 kHz of readings you will need to enable data streaming. Set the [30. Stream](command_detail?id=_30-stream) command to `1`. This will result in the [40. Raw distance data](command_detail?id=_40-raw-distance-data) packet being streamed as data is available.
+
+!> Please make sure you are running in a baud rate of 921600 to handle the data throughput of the high speed mode.
+
+|Read|Write|Persists|
+|---|---|---|
+| `uint8` | `uint8` | Yes |
 
 ---
 ## 85. Noise

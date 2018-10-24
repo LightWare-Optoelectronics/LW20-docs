@@ -32,6 +32,7 @@ This document supports the following devices (See [Firmware change log](change_l
 
 |Revision|Date|Notes|
 |---|---|---|
+| 8 | 24/10/2018 | Added information about command [40. Raw distance data] & [70. High speed mode] |
 | 7 | 19/10/2018 | Updated version support table. Updated Upgrader tool link. Added changes for versions 1.4.2, 1.4.3, 1.5.0. |
 | 6 | 03/10/2018 | Updated version support table. Added Upgrader tool download instructions. Added changes for versions 1.3.0, 1.3.1, 1.4.0, 1.4.1. |
 | 5 | 31/08/2018 | Updated version support table. Upgrade tool changed to version 1.8.0. Added firmware change log. |
