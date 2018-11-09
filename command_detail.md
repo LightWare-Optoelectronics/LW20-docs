@@ -109,7 +109,7 @@ When reading this command, or analyzing its response after writing a page, the p
 |-3|Flash failed to erase|
 |-4|Firmware file has invalid header|
 |-5|Flash failed to write|
-|-6|Firmware is for a different hardware version|
+|-6|Firmware is for a different hardware version or firmware version is too low|
 |-7|Firmware is for a different product|
 
 |Read|Write|Persists|

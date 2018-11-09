@@ -9,6 +9,8 @@ This document supports the following devices (See [Firmware change log](change_l
 
 |Product|Hardware|Firmware|Supported|
 |----|--------|--------|:-------:|
+|LW20|11/12   |1.6.0   |Yes      |
+|LW20|11/12   |1.5.1   |Yes      |
 |LW20|11/12   |1.5.0   |Yes      |
 |LW20|11/12   |1.4.3   |Yes      |
 |LW20|11/12   |1.4.2   |Yes      |
@@ -32,6 +34,7 @@ This document supports the following devices (See [Firmware change log](change_l
 
 |Revision|Date|Notes|
 |---|---|---|
+| 9 | 09/11/2018 | Updated version support table. Added change log for versions 1.5.1, 1.6.0. Modified [16. Stage firmware] command error code details. |
 | 8 | 24/10/2018 | Added information about command [40. Raw distance data] & [70. High speed mode] |
 | 7 | 19/10/2018 | Updated version support table. Updated Upgrader tool link. Added changes for versions 1.4.2, 1.4.3, 1.5.0. |
 | 6 | 03/10/2018 | Updated version support table. Added Upgrader tool download instructions. Added changes for versions 1.3.0, 1.3.1, 1.4.0, 1.4.1. |
