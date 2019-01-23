@@ -22,9 +22,6 @@
 *Changes*
 - Servo output is disabled when using Pixhawk compatibility mode.
 
-*Fixes*
-- Statistics waveform streaming now outputs final bucket correctly.
-
 ## 1.6.2
 
 *Changes*
